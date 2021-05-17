@@ -1,5 +1,5 @@
 const countdown = () => {
-	const countDate = new Date('May 30 , 2021 00:00:00').getTime()
+	const countDate = new Date('May 17 , 2027 10:25:00').getTime()
 
 	const now = new Date().getTime()
 
@@ -22,8 +22,17 @@ const countdown = () => {
 	document.querySelector('.hour').innerText = textHour
 	document.querySelector('.minute').innerText = textMinute
 	document.querySelector('.second').innerText = textSecond
+
+	// stop the countdown when it's near to done
+	if (gap < 10000) {
+		document.body.innerHTML = 'Yaay , we are happy to see you'
+	}
 }
 
-setInterval(() => {
-	countdown()
-}, 1000)
+try {
+	setInterval(() => {
+		countdown()
+	}, 1000)
+} catch (error) {
+	console.error(error)
+}
