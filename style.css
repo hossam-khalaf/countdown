@@ -56,3 +56,17 @@ h2 {
 	/* max-width: 600px; */
 	height: 50vh;
 }
+
+@media (max-width: 600px) {
+	h2 {
+		font-size: 2rem;
+	}
+	.day,
+	.hour,
+	.minute,
+	.second {
+		font-size: 1.3rem;
+		padding: 1rem;
+		margin-left: 10px;
+	}
+}
